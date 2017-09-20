@@ -2,9 +2,13 @@ package com.huawei;
 
 import javax.servlet.ServletContextListener;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
@@ -15,6 +19,7 @@ import org.springframework.context.annotation.Bean;
 import com.huawei.dto.WiselySettings;
 import com.huawei.listener.WebServiceListener;
 import com.huawei.servlet.WebServiceServlet;
+import com.huawei.webservice.cxf.WebServiceCXF;
 
 //@Configuration  
 //@ComponentScan(basePackages = {"springfox.*"})  
@@ -24,7 +29,7 @@ import com.huawei.servlet.WebServiceServlet;
 @EnableConfigurationProperties(
 		WiselySettings.class
 	)
-@ServletComponentScan
+@ServletComponentScan 	//扫描自定义的servlet类上面的注解，包括监听，过滤器，servlet
 @SuppressWarnings("all")
 public class Application extends SpringBootServletInitializer{
 	

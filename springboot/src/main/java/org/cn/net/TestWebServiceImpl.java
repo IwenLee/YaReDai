@@ -3,6 +3,8 @@ package org.cn.net;
 import javax.jws.WebService;
 
 /**
+ * 在启动第三方的webservice框架的时候，需要吧这里的webservice接口关闭，以免发生冲突
+ * 
  * webservice的基础原理例子，使用jdk来实现 的
  * 启动的时候我们可以使用ServletContextListener监听和servlet来启动，也可以使用springboot的特性CommandLineRunner来启动
  * 详细的启动方式请查看：com.huawei.init 包下的 initService.java .和

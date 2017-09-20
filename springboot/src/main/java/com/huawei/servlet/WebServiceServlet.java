@@ -15,9 +15,9 @@ public class WebServiceServlet extends HttpServlet{
 	@Override
 	public void init() throws ServletException {
 		/**启动webservice接口 --------------start*/
-		String url = "http://10.100.33.143:9992/service/springboot";	//http://ip:port/service/项目名称
-		Endpoint.publish( url, new TestWebServiceImpl());
-		System.err.println("webservice start successful by HttpServlet...... url:" +url);
+//		String url = "http://10.100.33.143:9992/service/springboot";	//http://ip:port/service/项目名称
+//		Endpoint.publish( url, new TestWebServiceImpl());
+//		System.err.println("webservice start successful by HttpServlet...... url:" +url);
 		/**启动webservice接口 ---------------end*/
 	}
 

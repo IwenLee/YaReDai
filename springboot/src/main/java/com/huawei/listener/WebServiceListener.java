@@ -14,9 +14,9 @@ public class WebServiceListener implements ServletContextListener{
 	public void contextInitialized(ServletContextEvent sce) {
 		
 		/**启动webservice接口 --------------start*/
-		String url = "http://10.100.33.143:9991/service/springboot";	//http://ip:port/service/项目名称
-		Endpoint.publish( url, new TestWebServiceImpl());
-		System.err.println("webservice start successful by ServletContextListener...... url:" +url);
+//		String url = "http://10.100.33.143:9991/service/springboot";	//http://ip:port/service/项目名称
+//		Endpoint.publish( url, new TestWebServiceImpl());
+//		System.err.println("webservice start successful by ServletContextListener...... url:" +url);
 		/**启动webservice接口 ---------------end*/
 		
 	}
